@@ -1,4 +1,4 @@
-let value = 2;
+let value = 4;
 
 function createBoard(value){
   for (let i = 0; i < (value * value); i++) {
