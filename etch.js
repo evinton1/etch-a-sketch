@@ -15,8 +15,7 @@ function createBoard(value){
 
 let reset = document.getElementById("reset");
 reset.addEventListener("click", function(e) {
-  alert("hello");
-  value = prompt();
+  value = parseInt(prompt("Enter a Value", "0"), 10);
   createBoard(value);
 });
 
