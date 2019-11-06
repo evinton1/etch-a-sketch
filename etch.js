@@ -1,6 +1,4 @@
 let value = 4;
-
-function crlet value = 4;
 let board;
 let mouseEnter;
 let root = document.querySelector("container");
