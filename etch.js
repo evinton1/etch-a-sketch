@@ -1,24 +1,33 @@
 let value = 4;
 
+function crlet value = 4;
+let board;
+let mouseEnter;
+let root = document.querySelector("container");
+container.style.setProperty("--colNum", value);
+container.style.setProperty("--rowNum", createBoard(value));
+
 function createBoard(value){
   for (let i = 0; i < (value * value); i++) {
   board = document.createElement("div");
   board.className = "board";
   board.id = "pixel" + i;
   container.appendChild(board);
-  let mouseEnter = function() {
-    document.getElementById("pixel" + i).style.backgroundColor = "blue";
+  mouseEnter = function() {
+  document.getElementById("pixel" + i).style.backgroundColor = "blue";
   };
   board.addEventListener("mouseenter", mouseEnter);
-}
 } 
+} 
+
+
+function removeBoard() {
+    // Removes an element from the document
+    board.parentNode.removeChild(board);
+}
 
 let reset = document.getElementById("reset");
 reset.addEventListener("click", function(e) {
-  value = parseInt(prompt("Enter a Value", "0"), 10);
-  createBoard(value);
+  removeBoard();
+  createBoard(parseFloat(prompt("Enter a Value", "0")));
 });
-
-let root = document.querySelector("container");
-container.style.setProperty("--colNum", value);
-container.style.setProperty("--rowNum", createBoard(value));
