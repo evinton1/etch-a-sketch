@@ -2,8 +2,7 @@ let value = 4;
 let board;
 let mouseEnter;
 let root = document.querySelector("container");
-container.style.setProperty("--colNum", value);
-container.style.setProperty("--rowNum", createBoard(value));
+root.style.setProperty("--colNum", value);
 
 function createBoard(value){
   for (let i = 0; i < (value * value); i++) {
