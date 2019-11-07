@@ -21,7 +21,8 @@ function createBoard(value){
 
 function removeBoard() {
     // Removes an element from the document
-    board.parentNode.removeChild(board);
+  let element = document.querySelector("pixel");
+    element.remove();
 }
 
 let reset = document.getElementById("reset");
