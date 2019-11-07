@@ -21,7 +21,7 @@ function createBoard(value){
 
 function removeBoard() {
     // Removes an element from the document
-  let element = document.querySelector("pixel");
+  let element = document.querySelector("board");
     element.remove();
 }
 
