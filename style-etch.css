@@ -1,18 +1,17 @@
-:root {
-    --colNum: 10;
-  }
-  .board {
-    border: 1px lightgrey;
-    border-style: ridge;
-  }
-  
-  #container {
-    border: 1px solid black;
-    display: grid;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: repeat(var(--colNum), 1fr);
-    height: 800px;
-    width: 800px;
-  }
-  
+#container {
+  border: 10px solid red;
+  border-radius: 2%;
+  background-color: #F0F0F0;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  width: 600px;
+}
+
+#reset{
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
