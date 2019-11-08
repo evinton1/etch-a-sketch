@@ -1,27 +1,22 @@
-let value = 4;
-let board;
-let mouseEnter;
-let root = document.querySelector("container");
-container.style.setProperty("--colNum", value);
+let createBoard = function(value) {
+  container.style.gridTemplateColumns = `repeat(${value}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${value}, 1fr)`;
+  for (let i = 0; i < value * value; i++) {
+    board = document.createElement("div");
+    board.className = "board";
+    board.id = "pixel" + i;
+    container.appendChild(board);
+    let mouseEnter = function() {
+      document.getElementById("pixel" + i).style.backgroundColor = "black";
+    };
+    board.addEventListener("mouseenter", mouseEnter);
+  }
+};
 
-function createBoard(value){
-  for (let i = 0; i < (value * value); i++) {
-  board = document.createElement("div");
-  board.className = "board";
-  board.id = "pixel" + i;
-  container.appendChild(board);
-  mouseEnter = function() {
-  document.getElementById("pixel" + i).style.backgroundColor = "blue";
-  };
-  board.addEventListener("mouseenter", mouseEnter);
-} 
-} 
-
+createBoard(40);
 
 function removeBoard() {
-    // Removes an element from the document
-  let element = document.querySelector("board");
-    element.remove();
+  container.innerHTML = "";
 }
 
 let reset = document.getElementById("reset");
