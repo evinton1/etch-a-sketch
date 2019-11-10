@@ -1,20 +1,25 @@
-:root {
-    --colNum: 10;
-    --rowNum: 10;
-  }
-  .board {
-    border: 1px lightgrey;
-    border-style: ridge;
-  }
-  
-  #container {
-    border: 1px solid black;
+#container {
+    border: 10px solid red;
+    border-radius: 2%;
+    background-color: #F0F0F0;
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(var(--colNum), 1fr);
-    grid-template-rows: repeat(var(--rowNum), 1fr);
-    height: 800px;
-    width: 800px;
+    height: 600px;
+    width: 600px;
+  }
+  .divider{
+      width:5px;
+      height:auto;
+      display:inline-block;
   }
   
+  #buttons{
+    display: table;
+    margin: 0px auto 10px auto;
+  }
+  
+  #etch{
+    text-align: center;
+    font-size: 30px; 
+  }

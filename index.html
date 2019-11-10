@@ -1,13 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head> <link rel="stylesheet" href="style-etch.css">
+
+<head>
+  <link rel="stylesheet" href="style-etch.css">
+  <meta charset="utf-8">
   <title>Etch-a-Sketch</title>
 </head>
+<meta name="viewport" content="width=device-width" />
+
 <body>
+  <div id="title">
+    <p id="etch">Let's Etch-a-Sketch</p>
+  </div>
+  <div id = "buttons">
+    <button id="clear">Clear</button>
+    <div class="divider"></div>
+    <button id="reset">Resize Board</button>
+    <div class="divider"></div>
+    <button id="bckgColor">Random Colors</button>
+  </div>
   <div id="container">
   </div>
-  <input type="number" id="columns" placeholder="Enter a number"></input>
- <button id="reset">Reset</button>
- <script src="etch.js"></script>
+
 </body>
+
 </html>
